@@ -210,3 +210,39 @@ checks:    python -m pytest -q → 4 passed, 3 skipped. By-hand edge cases: unkn
 evidence:  AC-4; S-1 R2, R4, D3, D6
 risk:      The 404 path and R5 (each application in exactly one stage list) have no
            automated test; they were checked only by hand in this session.
+
+## Entry 14
+artifact:  traceability/traceability.csv, report/build_report.py, report/render_pdf.py,
+           report/REPORT.md, report/CS690_M1_Report.pdf, report/test_output_6e.txt; commit 6ed52f2
+tool:      Claude Code, Claude Opus 5.5 (claude-opus-5-5), 2026-11-09
+prompts:   build the Deliverable 7 matrix and the submission PDF with a table of contents;
+           prompts/session_kickoff_prompt.md
+review:    The matrix has one row per AC (19 rows): 7 name tests that exist in the repo, 12
+           say "Not yet written". The report is generated from the repository files, so the
+           PDF and the repo cannot drift apart. Rendered pages 16, 22 and 23 were checked
+           visually. Two formatting bugs were found and fixed: lists after bold labels ran
+           into paragraphs, and inline code broke mid-word. Only blank lines were added to the
+           docs; no wording changed.
+checks:    for each test name in the CSV: grep "def <name>" tests/*.py → 7/7 found.
+           Fresh clone + pip install + python -m pytest -q → 4 passed, 3 skipped (saved
+           to report/test_output_6e.txt). The PDF is 34 pages; its TOC shows page numbers.
+evidence:  AC-1..AC-19; Deliverables 6e and 7
+risk:      The repository URL in the report is still a TODO. The fresh-clone check ran
+           against a local clone, not a clone from GitHub.
+
+## Entry 15
+artifact:  contribution/Abraham_Eapen_contribution.md (+ PDF), docs/interviews/participation.md
+           (Abraham on INT-04 and INT-05); commit recorded in git log after entry 14
+tool:      Claude Code, Claude Opus 5.5 (claude-opus-5-5), 2026-11-09
+prompts:   draft the Deliverable 9 statement from Abraham's answers; prompts/session_kickoff_prompt.md
+review:    Abraham said he took part in INT-04 and INT-05 and that his personal authorship is
+           the notes for those interviews. The agent removed two sentences from its own first
+           draft because they claimed reviews Abraham had not described (checking teammates'
+           transcriptions, and finding the 500 errors himself). The teammate-review part is
+           left as a TODO for Abraham to write.
+checks:    grep "TODO" contribution/Abraham_Eapen_contribution.md → 1 (teammate review);
+           the signature and date lines are blank for a hand signature
+evidence:  Deliverable 9; INT-04, INT-05
+risk:      Dates, formats and team members for INT-01 to INT-03 and the dates for INT-04 and
+           INT-05 are still unfilled, so the requirement that every member took part in at
+           least one interview is not yet shown.

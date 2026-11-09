@@ -9,8 +9,8 @@ All interviews were with real people in, or closely involved in, the target user
 | INT-01 | Senior recruiter | [fill in] | [fill in] | [fill in] |
 | INT-02 | Director of talent acquisition | [fill in] | [fill in] | [fill in] |
 | INT-03 | Senior developer and hiring manager, [financial-services firm] (1 open role) | 2026-11-04 | [fill in] | In person, 20 min, handwritten notes |
-| INT-04 | Hiring manager ([senior manager, technology governance]; 1–2 open roles) | [fill in] | [fill in] | [fill in] |
-| INT-05 | Internal applicant (product manager, [a few] years at company) | [fill in] | [fill in] | [fill in] |
+| INT-04 | Hiring manager ([senior manager, technology governance]; 1–2 open roles) | [fill in] | Abraham Eapen (add teammates if present) | [fill in] |
+| INT-05 | Internal applicant (product manager, [a few] years at company) | [fill in] | Abraham Eapen (add teammates if present) | [fill in] |
 
 ## Optional items not used
 

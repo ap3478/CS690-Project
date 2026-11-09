@@ -66,7 +66,7 @@ def build() -> str:
     p: list[str] = []
     p.append("# CS 690 Project Milestone 1: Internal Jobs Board Portal\n")
     p.append("Team: Ketan Verma, Aditya Pothuri, Abraham Eapen  \n"
-             f"Repository: {REPO_URL}  \nSubmitted commit: `{sha()}`\n")
+             f"Repository: {REPO_URL}  \nReport built from commit: `{sha()}`\n")
 
     p.append('## Table of contents {#toc}\n')
     p.append("| Deliverable | Page | Repository path |\n| --- | --- | --- |\n" +
