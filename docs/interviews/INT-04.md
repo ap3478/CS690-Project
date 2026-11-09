@@ -2,7 +2,10 @@
 
 - **Cite as:** INT-04, hiring manager ([senior manager, technology governance])
 - **Source file:** `CS690 - Project - Hiring Manager Answers.docx` (team's original notes)
-- **Format / consent / date / team members:** see `docs/interviews/participation.md`
+- **Date:** week of 2026-11-02 (exact day not recorded)
+- **Format:** in person, about 20–30 minutes; handwritten notes, typed up afterward; no recording
+- **Team member:** Abraham Eapen
+- **Consent:** at the start, the interviewee was told this is a graduate class project, how the notes would be used, and that they could stop at any time (as reported by Abraham Eapen)
 - No names or identifying details are kept; some details are generalized in [brackets] for the public repository. Answers are as recorded in the original notes; questions with no recorded answer are marked so.
 
 ## Raw notes
