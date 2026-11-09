@@ -294,3 +294,19 @@ risk:      The "two pages" limit depends on the font and heading sizes; a grader
            markdown on GitHub may see more than two screens. S-14's AC-20 assumes OCR can read
            "kdb+" from a PNG; no sample scan has been tried. The design docs were trimmed
            after the gap check and were not re-run through it.
+
+## Entry 18
+artifact:  docs/interviews/participation.md (INT-04, INT-05 rows), INT-04.md and INT-05.md
+           headers; commit 0cb68a4
+tool:      Claude Code, Claude Opus 5.5 (claude-opus-5-5), 2026-11-09
+prompts:   Abraham: "Prompt me to fill out questions in the participation table related to
+           Abraham Eapen"; prompts/participation_prompt.md
+review:    Every value came from Abraham's answers to the agent's questions; the agent wrote no
+           new facts. Abraham first said a teammate attended at one or both interviews, then
+           answered "Abraham only" for each when asked per interview. The per-interview answers
+           were used.
+checks:    grep "\[fill in\]" docs/interviews/participation.md → INT-01, INT-02, INT-03 only
+evidence:  Deliverable 2b; INT-04, INT-05
+risk:      Dates are recorded only to the week (2026-11-02). Consent for INT-04 and INT-05 is
+           Abraham's recollection, not a contemporaneous written note. Ketan and Aditya do not
+           appear in any row yet, so "every member takes part" is still unshown.
