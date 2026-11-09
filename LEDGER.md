@@ -261,3 +261,36 @@ evidence:  Deliverable 8
 risk:      The report PDF names d202a40's parent as its build commit. If any file changes
            before submission, the PDF must be rebuilt (python report/build_report.py, then
            render_pdf.py), or the PDF and the repo will disagree.
+
+## Entry 17
+artifact:  review fixes 1–5: docs/design/S-1.md, S-3.md, both gap adjudications,
+           evidence/evidence_log.md (Q-4), backlog/backlog.md (S-14, AC-20, ranking),
+           docs/proposal_followup.md (new), traceability.csv (AC-20), README.md, code comments
+           in src/jobsboard/; commit 0c92988
+tool:      Claude Code, Claude Opus 5.5 (claude-opus-5-5), 2026-11-09
+prompts:   Abraham: "fix items 1 to 5. prompt me if any for reviews, decision making, and
+           validation" (following the agent's audit of the repo against the handout and
+           proposal); recorded in prompts/review_fixes_prompt.md
+review:    Abraham decided three points: S-14 for scans goes below the line; S-12 stays below
+           with the change recorded; moves out of Offer become an S-1 non-goal instead of D6.
+           These edits to team-owned docs/design/, backlog/ and evidence/ were made at
+           Abraham's explicit request.
+           (1) Both design docs were cut to fit 2 pages, and rules stated twice were removed
+           (old S-1 D2, D3, D5 repeated R1 and R2; old S-3 D2, D3 repeated R2, R5, R6).
+           (2) Q-4 now asks only who sets Withdrawn and whether it can be reopened, so AC-16
+           no longer answers it. (3) S-1 D6 was removed; Offer → {} stays in R1 and is
+           listed as a non-goal.
+           Errors caught during the trim: a merged edge-case bullet said that same-stage and
+           backward moves return 422 (they return 409); restored. Several gap-check decisions
+           had been cut too far (IDs stored as given, HTTP-only validation, FastAPI path
+           defaults, stack, test isolation); restored. Both adjudication tables were rewritten
+           to point at the new section numbers.
+checks:    Page count at Letter, 11pt DejaVu Sans, 1-inch margins, normal heading sizes:
+           S-1 2 pages (643 words), S-3 2 pages (667 words). With a browser's default heading
+           spacing both still run to 3 pages. grep "Stop and ask": S-1 4, S-3 4.
+           python -m pytest -q → 4 passed, 3 skipped. The traceability CSV has 20 rows.
+evidence:  S-1, S-3, S-8, S-10, S-12, S-14; AC-16, AC-20; Q-3, Q-4; E-19
+risk:      The "two pages" limit depends on the font and heading sizes; a grader viewing the
+           markdown on GitHub may see more than two screens. S-14's AC-20 assumes OCR can read
+           "kdb+" from a PNG; no sample scan has been tried. The design docs were trimmed
+           after the gap check and were not re-run through it.

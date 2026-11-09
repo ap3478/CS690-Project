@@ -8,3 +8,4 @@ Every prompt referenced from `LEDGER.md` is stored here verbatim, at the path th
 | `gap_check_prompt.md` | Deliverable 5 gap check (lecture prompt) | 5, 6 |
 | `s1_plan_prompt.md` | Deliverable 6c: plan before editing | 9 |
 | `s1_task_AC-1.md` … `s1_task_AC-4.md` | Deliverable 6d bounded tasks | 10–13 |
+| `review_fixes_prompt.md` | Audit follow-up: fixes 1–5 | 17 |
