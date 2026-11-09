@@ -3,10 +3,11 @@ from __future__ import annotations
 
 from dataclasses import asdict
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
+from fastapi.responses import JSONResponse
 from pydantic import BaseModel, StrictStr, field_validator
 
-from jobsboard.pipeline import ApplicationStore, Application, Stage, move_stage
+from jobsboard.pipeline import ApplicationStore, Application, InvalidTransition, Stage, move_stage
 
 app = FastAPI(title="Internal Jobs Board")
 store = ApplicationStore()  # module-level, in-memory (D4, D11)
@@ -25,6 +26,19 @@ class CreateApplicationBody(BaseModel):
 
 class MoveStageBody(BaseModel):
     to_stage: Stage
+
+
+@app.exception_handler(InvalidTransition)
+def _invalid_transition(_: Request, exc: InvalidTransition) -> JSONResponse:
+    # D5: a refused move returns 409 naming both stages.
+    return JSONResponse(
+        status_code=409,
+        content={"detail": {
+            "error": "invalid_transition",
+            "from_stage": exc.from_stage.value,
+            "to_stage": exc.to_stage.value,
+        }},
+    )
 
 
 def _to_json(a: Application) -> dict:
