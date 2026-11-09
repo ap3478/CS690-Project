@@ -23,7 +23,7 @@ class Application:
 
 
 class PipelineError(Exception):
-    """Base class for S-1 domain errors (D10)."""
+    """Base class for S-1 domain errors (S-1.md D4)."""
 
 
 class ApplicationNotFound(PipelineError):
@@ -39,7 +39,7 @@ class InvalidTransition(PipelineError):
         self.to_stage = to_stage
 
 
-# R1 transition table. Offer -> {} until OQ-1 (Q-3) is answered (D6). Rejected is final (D3).
+# R1 transition table (S-1.md §6). Moves out of Offer are a non-goal until OQ-1 (Q-3) is answered.
 _ALLOWED: dict[Stage, frozenset[Stage]] = {
     Stage.APPLIED: frozenset({Stage.SCREENED, Stage.REJECTED}),
     Stage.SCREENED: frozenset({Stage.INTERVIEW, Stage.REJECTED}),
@@ -54,7 +54,7 @@ def allowed_next(stage: Stage) -> frozenset[Stage]:
 
 
 class ApplicationStore:
-    """In-memory store (D4). Dict insertion order gives creation order (D10)."""
+    """In-memory store (S-1.md D3). Dict insertion order gives creation order."""
 
     def __init__(self) -> None:
         self._apps: dict[str, Application] = {}

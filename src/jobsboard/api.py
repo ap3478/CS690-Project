@@ -17,7 +17,7 @@ from jobsboard.pipeline import (
 )
 
 app = FastAPI(title="Internal Jobs Board")
-store = ApplicationStore()  # module-level, in-memory (D4, D11)
+store = ApplicationStore()  # module-level, in-memory (S-1.md D3)
 
 
 class CreateApplicationBody(BaseModel):
@@ -27,7 +27,7 @@ class CreateApplicationBody(BaseModel):
     @classmethod
     def not_blank(cls, v: str) -> str:
         if not v.strip():
-            raise ValueError("applicant_id must not be empty")  # D8
+            raise ValueError("applicant_id must not be empty")  # S-1.md §4, §5
         return v
 
 
@@ -46,7 +46,7 @@ def _not_found(_: Request, exc: ApplicationNotFound) -> JSONResponse:
 
 @app.exception_handler(InvalidTransition)
 def _invalid_transition(_: Request, exc: InvalidTransition) -> JSONResponse:
-    # D5: a refused move returns 409 naming both stages.
+    # S-1.md R2 and §4: a refused move returns 409 naming both stages.
     return JSONResponse(
         status_code=409,
         content={"detail": {

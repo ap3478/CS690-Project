@@ -26,6 +26,7 @@ Named settings stand for values the interviews did not settle. No criterion pick
 | S-11 | As a **hiring manager**, I want to compare shortlisted candidates side by side with their fit scores and matched and missing skills, so that I don't keep a personal spreadsheet. | E-15 |
 | S-12 | As an **HR recruiter**, I want a short written explanation of each applicant's fit, so that I can pass the reasoning to the hiring manager. | **Assumption**, rests on A-7. Clarifying question: *"The last time you wrote up why a candidate fit a role, what did you include, who read it, and how long did it take?"* |
 | S-13 | As an **internal applicant**, I want a rejection notice that tells me the stage I reached and whom to ask for feedback, so that I can learn why without relying on knowing the hiring manager. | E-3, E-4 |
+| S-14 | As an **HR recruiter**, I want text extracted from resumes uploaded as scanned images (JPEG or PNG), so that I don't have to send applicants or HR back for a file in a proper format. | E-19. Rests also on A-6 (English documents). |
 
 ## 4c. INVEST check
 
@@ -46,6 +47,7 @@ P = pass. Each fail names the specific problem.
 | S-11 | **Fail:** depends on S-4 for scores and skills. | P | P | P | P | P |
 | S-12 | **Fail:** depends on S-4. | P | **Fail:** value rests only on A-7; no interview supports it. | P | P | **Fail:** "a good explanation" has no objective check beyond length and named skills. |
 | S-13 | **Fail:** depends on S-1 (needs the Rejected move). | P | P | P | P | P |
+| S-14 | **Fail:** depends on S-8's upload path. | P | P | **Fail:** OCR accuracy on phone photos is unknown until we test it on sample scans. | P | P |
 
 ## 4d. Acceptance criteria
 
@@ -70,8 +72,9 @@ P = pass. Each fail names the specific problem.
 | AC-17 | S-11 | three applications for P are at Interview | the hiring manager opens the comparison view for P | one view shows all three, each with fit score and matched and missing required skills |
 | AC-18 | S-12 | an application has a fit score with at least one matched and one missing required skill | the recruiter opens it | a written explanation of at most `EXPLANATION_MAX_WORDS` words names at least one matched and one missing required skill |
 | AC-19 | S-13 | an application is at Interview | the recruiter moves it to Rejected | the applicant's view shows the label `APPLICANT_STAGE_LABELS["Interview"]` as the last stage reached and a named contact for feedback |
+| AC-20 | S-14 | an applicant uploads a PNG scan of a resume whose text includes "PostgreSQL" | the recruiter opens the application | the application's extracted text includes "PostgreSQL" |
 
-Q entries are not quietly settled. AC-2 and AC-4 apply A-2 and A-3, which are explicit, logged assumptions. No criterion moves an application out of Offer (Q-3), orders tied scores (Q-6), overrides a flag (Q-5), matches synonyms (Q-9), or picks a stage at which a manager is told (Q-7). AC-10 covers only submission, which INT-04:P12 supports.
+Q entries are not quietly settled. AC-2 and AC-4 apply A-2 and A-3, which are explicit, logged assumptions. AC-16 records Withdrawn separately from Rejected, which E-6 supports; it leaves open who sets it and whether it can be reopened (Q-4). No criterion moves an application out of Offer (Q-3), orders tied scores (Q-6), overrides a flag (Q-5), matches synonyms (Q-9), or picks a stage at which a manager is told (Q-7). AC-10 covers only submission, which INT-04:P12 supports.
 
 ## 4e. Ranking and cut line
 
@@ -88,6 +91,7 @@ Q entries are not quietly settled. AC-2 and AC-4 apply A-2 and A-3, which are ex
 | 9 | S-9 | Applicants wonder whether their data stays on file (E-20), and right to erasure is a committed proposal scope item. |
 | **— cut line —** | | |
 | 10 | S-10 | Below the line: blocked by Q-4. |
-| 11 | S-13 | Below the line: needs a feedback process the interviews did not describe. |
-| 12 | S-11 | Below the line: useful (E-15), but S-3's ranked list covers most of the need. |
-| 13 | S-12 | Below the line: rests only on A-7. Our proposal's cut line drops LLM explanations if extraction accuracy falls short. |
+| 11 | S-14 | Below the line: only one interviewee mentioned unusual formats (E-19), and that company sends them back to HR instead of reading them. Split out of the proposal's "Apply with documents" scope item. |
+| 12 | S-13 | Below the line: needs a feedback process the interviews did not describe. |
+| 13 | S-11 | Below the line: useful (E-15), but S-3's ranked list covers most of the need. |
+| 14 | S-12 | Below the line: rests only on A-7, so it moved below the line ahead of the proposal's Milestone 2 accuracy check (see Deliverable 1). |

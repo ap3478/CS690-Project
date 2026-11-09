@@ -57,7 +57,7 @@ Owners: **AP** = Aditya Pothuri (Project Lead), **KV** = Ketan Verma (Tech Lead)
 | Q-1 | Which stage names should an applicant see: every internal stage (Screened, Interview), or a coarser status? When does a rejection become visible to them? | INT-05:P08, INT-05:P11 | Open | AP |
 | Q-2 | **Disagreement:** INT-04:P10 says internal candidates can track progress in the system, but INT-05:P08 says the portal showed only "Submitted" the whole time. Which is typical, and what exactly can applicants see today? | INT-04:P10, INT-05:P08 | Open | AP |
 | Q-3 | What happens to an application at Offer when the offer is declined or rescinded: does it move to Rejected, to a new stage, or stay at Offer? | Team | Open | AP |
-| Q-4 | Should Withdrawn be its own final stage, separate from Rejected, and who can set it: the applicant, the recruiter, or both? | INT-02:P06, INT-05:P15 | Open | AE |
+| Q-4 | Who can set an application to Withdrawn (the applicant, the recruiter, or both), and can a withdrawn application be reopened? | INT-02:P06, INT-05:P15 | Open | AE |
 | Q-5 | Can a recruiter override the "Does not meet minimum" flag for an applicant with transferable experience, and should an overridden applicant then rank with those who meet the minimum? | INT-04:P06, INT-04:P07 | Open | KV |
 | Q-6 | How should applicants with equal fit scores be ordered in the ranked list? | Team | Open | KV |
 | Q-7 | At which stage, if any, should the system tell the applicant's current manager, and who triggers it? | INT-04:P12, INT-05:P10 | Open | AP |

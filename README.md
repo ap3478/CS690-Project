@@ -39,9 +39,10 @@ Then open `http://127.0.0.1:8000/docs`.
 
 | Path | What it holds | Deliverable |
 | --- | --- | --- |
+| `docs/proposal_followup.md` | Approval items and scope changes since the proposal | 1 |
 | `docs/interviews/` | Interview questions, raw notes INT-01 to INT-05, participation table, compliments and predictions, lesson learned | 2 |
 | `evidence/evidence_log.md` | E, A, and Q evidence log | 3 |
-| `backlog/backlog.md` | Stories S-1 to S-13, evidence trace, INVEST, AC-1 to AC-19, ranking and cut line | 4 |
+| `backlog/backlog.md` | Stories S-1 to S-14, evidence trace, INVEST, AC-1 to AC-20, ranking and cut line | 4 |
 | `docs/design/` | Design docs `S-1.md` and `S-3.md`, gap-check replies and adjudication | 5 |
 | `docs/plans/S-1-plan.md` | Agent-written build plan for S-1 | 6c |
 | `src/jobsboard/` | Application code | 6d |

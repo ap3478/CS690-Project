@@ -50,7 +50,7 @@ def trace_table() -> str:
 
 
 TOC = [
-    ("d1", "1. Proposal follow-up", "this PDF"),
+    ("d1", "1. Proposal follow-up and scope changes", "docs/proposal_followup.md"),
     ("d2", "2. User interviews (questions, notes, participation, compliments and predictions, lesson)", "docs/interviews/"),
     ("d3", "3. Evidence log", "evidence/evidence_log.md"),
     ("d4", "4. Backlog (stories, trace, INVEST, AC, ranking)", "backlog/backlog.md"),
@@ -72,7 +72,7 @@ def build() -> str:
     p.append("| Deliverable | Page | Repository path |\n| --- | --- | --- |\n" +
              "".join(f"| [{t}](#{a}) | <a class='pageref' href='#{a}'></a> | `{path}` |\n" for a, t, path in TOC))
 
-    p.append('\n## 1. Proposal follow-up {#d1}\n\nNo items.\n')
+    p.append('\n## 1. Proposal follow-up {#d1}\n' + demote(read("docs/proposal_followup.md"), 1))
 
     p.append('\n## 2. User interviews {#d2}\n')
     p.append("### 2a. Interview questions\n" + demote(read("docs/interviews/questions.md"), 2))
