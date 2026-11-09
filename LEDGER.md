@@ -246,3 +246,18 @@ evidence:  Deliverable 9; INT-04, INT-05
 risk:      Dates, formats and team members for INT-01 to INT-03 and the dates for INT-04 and
            INT-05 are still unfilled, so the requirement that every member took part in at
            least one interview is not yet shown.
+
+## Entry 16
+artifact:  SHA roll-up of AI-assisted commits not named in an earlier entry: 12dc16d, 09b7f77,
+           52bfc46 (ledger commits), 62d56e9 (contribution statement draft, participation, entries 14–15),
+           d202a40 (rebuilt report PDF and contribution PDF)
+tool:      Claude Code, Claude Opus 5.5 (claude-opus-5-5), 2026-11-09
+prompts:   no new prompt; covered by prompts/session_kickoff_prompt.md
+review:    Compared git log --oneline against every artifact line in entries 1–15. All 13
+           commits now appear in at least one entry. The commit that adds this entry is
+           ledger-only.
+checks:    git log --oneline | wc -l → 13 before this entry; python -m pytest -q → 4 passed, 3 skipped
+evidence:  Deliverable 8
+risk:      The report PDF names d202a40's parent as its build commit. If any file changes
+           before submission, the PDF must be rebuilt (python report/build_report.py, then
+           render_pdf.py), or the PDF and the repo will disagree.
