@@ -1,0 +1,12 @@
+....sss                                                                  [100%]
+=============================== warnings summary ===============================
+.venv/lib/python3.12/site-packages/starlette/testclient.py:40
+  /tmp/claude-0/-root-CS690-Project/cb62ce86-28f0-48df-9c4a-7dc1004098a8/scratchpad/clone/.venv/lib/python3.12/site-packages/starlette/testclient.py:40: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_s3_ranking.py:17: AC-6: S-3 not built in Milestone 1
+SKIPPED [1] tests/test_s3_ranking.py:37: AC-7: S-3 not built in Milestone 1
+SKIPPED [1] tests/test_s3_ranking.py:57: AC-8: S-3 not built in Milestone 1
+4 passed, 3 skipped, 1 warning in 0.33s

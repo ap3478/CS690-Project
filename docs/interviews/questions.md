@@ -7,10 +7,12 @@ We started from the five recruiter questions in the proposal (Appendix C) and re
 ## Guide A: HR recruiter or hiring manager (used for INT-04; INT-01 to INT-03 used role-specific variants, recorded verbatim in their notes)
 
 **Opening: their situation**
+
 1. What's your role, and roughly how many internal openings are you working on right now?
 2. In a typical month, how much of your time goes to internal candidates compared with outside hires?
 
 **Digging into one real event**
+
 3. `[PE]` Tell me about the last internal role you filled. Walk me through it from the day the role was approved to the offer. *(kept from proposal Q1)*
 4. `[PE]` For that role, how did the internal applications reach you? How many came through the ATS, and how many by email, Teams or in person? *(proposal Q2, made more specific)*
 5. `[PE]` Once an application arrived, what did you do with it? Where did the resume go, and what did you have open next to it?
@@ -25,15 +27,18 @@ We started from the five recruiter questions in the proposal (Appendix C) and re
 14. What have you tried so far to make screening or tracking easier, such as spreadsheets, ATS features or templates? What happened with it?
 
 **Closing**
+
 15. Who else should we talk to? For example, a hiring manager, someone in IT or privacy/Legal, or an employee who recently applied internally.
 
 ## Guide B: internal job applicant (used for INT-05)
 
 **Opening: their situation**
+
 1. What's your current role, and how long have you been at the company?
 2. Over the past year or two, how often have you looked at internal openings? What usually prompted you to look?
 
 **Digging into one real event**
+
 3. `[PE]` Tell me about the last time you applied for an internal role. Walk me through it from when you first heard about the opening to the last time you heard anything back.
 4. `[PE]` How did you first find out about that opening? Where did you go to see the details?
 5. `[PE]` When you sat down to apply, what did you actually do, step by step? Which device were you on, and where did you go?
@@ -48,6 +53,7 @@ We started from the five recruiter questions in the proposal (Appendix C) and re
 14. `[PE]` Tell me about a time you applied for a job outside the company. How did that process compare with applying internally?
 
 **Closing**
+
 15. Who else should we talk to? For example, a colleague who recently moved roles internally, or someone who tried and didn't get the role.
 
 ## Weak question we dropped

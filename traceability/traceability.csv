@@ -1,0 +1,20 @@
+evidence_id,story_id,acceptance_criterion_id,test_name
+E-5;E-6;E-7,S-1,AC-1,tests/test_s1_pipeline.py::test_ac1_applied_to_screened_listed_under_screened
+E-5;E-6;E-7,S-1,AC-2,tests/test_s1_pipeline.py::test_ac2_skip_applied_to_interview_refused
+E-5;E-6;E-7,S-1,AC-3,tests/test_s1_pipeline.py::test_ac3_interview_to_rejected_listed_under_rejected
+E-5;E-6;E-7,S-1,AC-4,tests/test_s1_pipeline.py::test_ac4_rejected_to_screened_refused
+E-1;E-2;E-3,S-2,AC-5,Not yet written
+E-11;E-12;E-13;E-14,S-3,AC-6,tests/test_s3_ranking.py::test_ac6_flagged_never_above_qualified
+E-11;E-12;E-13;E-14,S-3,AC-7,tests/test_s3_ranking.py::test_ac7_qualified_ordered_by_fit_score
+E-11;E-12;E-13;E-14,S-3,AC-8,tests/test_s3_ranking.py::test_ac8_flagged_applicant_kept_and_stage_unchanged
+E-11;E-13,S-4,AC-9,Not yet written
+E-8;E-9;E-10,S-5,AC-10,Not yet written
+E-10;E-16,S-6,AC-11,Not yet written
+E-10;E-16,S-6,AC-12,Not yet written
+E-16;E-17,S-7,AC-13,Not yet written
+E-18;E-19,S-8,AC-14,Not yet written
+E-20,S-9,AC-15,Not yet written
+E-6,S-10,AC-16,Not yet written
+E-15,S-11,AC-17,Not yet written
+A-7 (Assumption),S-12,AC-18,Not yet written
+E-3;E-4,S-13,AC-19,Not yet written

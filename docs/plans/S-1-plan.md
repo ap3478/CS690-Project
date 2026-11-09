@@ -5,6 +5,7 @@ Written by Claude Code (Claude Opus 5.5) from `prompts/s1_plan_prompt.md`, befor
 ## How
 
 **Files that change**
+
 - `src/jobsboard/pipeline.py` (new). `Stage` enum, `Application` frozen dataclass, `PipelineError`, `ApplicationNotFound`, `InvalidTransition`, the `_ALLOWED` transition table, `allowed_next()`, `ApplicationStore`, and `move_stage()` (S-1.md §4, D10).
 - `src/jobsboard/api.py` (new). FastAPI `app`, the module-level `ApplicationStore`, Pydantic request bodies (`applicant_id: str`, `to_stage: Stage`), and the three routes in S-1.md §4. Domain errors map to 404 and 409 (D5, D9).
 - `src/jobsboard/__init__.py` already exists and is empty. It is not changed.
