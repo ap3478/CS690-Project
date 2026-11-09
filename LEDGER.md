@@ -182,3 +182,31 @@ checks:    python -m pytest -q → 4 passed, 3 skipped (AC-4 also passes now, be
 evidence:  AC-2 (and AC-4); S-1 R2, R4, D5
 risk:      An unknown application_id still returns 500, not the 404 in S-1.md §4. No AC
            covers 404, so only the Task 4 by-hand check guards it.
+
+## Entry 12
+artifact:  verification of AC-3 against src/jobsboard/pipeline.py (no code change); verified at commit 09b7f77
+tool:      Claude Code, Claude Opus 5.5 (claude-opus-5-5), 2026-11-09
+prompts:   bounded task AC-3; prompts/s1_task_AC-3.md
+review:    Abraham approved the plan as verify-only, because Task 1 had already created the
+           full R1 table. Read pipeline.py line 46: Interview → {Offer, Rejected}, matching
+           S-1.md R1. No file was edited.
+checks:    python -m pytest -q tests/test_s1_pipeline.py::test_ac3_interview_to_rejected_listed_under_rejected
+           → 1 passed; git status → clean
+evidence:  AC-3; S-1 R1, R3
+risk:      Because Task 1 created the table in one step, the AC-3 test never failed before it
+           passed. Its ability to catch a missing Interview → Rejected entry has not been
+           shown by a failing run.
+
+## Entry 13
+artifact:  src/jobsboard/api.py (404 handler); commit 2848930
+tool:      Claude Code, Claude Opus 5.5 (claude-opus-5-5), 2026-11-09
+prompts:   bounded task AC-4; prompts/s1_task_AC-4.md
+review:    The plan (a 404 handler in api.py only) was shown and approved by Abraham before
+           the edit. Read the diff: 17 lines added in api.py only. The 404 body matches
+           S-1.md §4, and the imports were regrouped.
+checks:    python -m pytest -q → 4 passed, 3 skipped. By-hand edge cases: unknown id → 404
+           {"error": "application_not_found", "application_id": "nope"}; Interview → Screened
+           → 409; Offer → Rejected → 409 (D6; OQ-1 still open); missing body → 422
+evidence:  AC-4; S-1 R2, R4, D3, D6
+risk:      The 404 path and R5 (each application in exactly one stage list) have no
+           automated test; they were checked only by hand in this session.
