@@ -168,3 +168,17 @@ checks:    python -m pytest -q → 2 passed (AC-1, AC-3), 2 failed (AC-2, AC-4: 
            same-stage move → 500; unknown application → 500 (to be fixed in Tasks 2 and 4)
 evidence:  AC-1; S-1 R1, R3, R5, D4, D6, D10
 risk:      Unknown application IDs still return 500 instead of 404 until Task 4.
+
+## Entry 11
+artifact:  src/jobsboard/api.py (409 handler); commit 3dd5592
+tool:      Claude Code, Claude Opus 5.5 (claude-opus-5-5), 2026-11-09
+prompts:   bounded task AC-2; prompts/s1_task_AC-2.md
+review:    The plan (one exception handler, api.py only) was shown and approved by Abraham
+           before the edit. Read the diff: 16 lines added, 2 changed, all in api.py. The body
+           uses the stage .value strings, as the AC requires. Nothing else changed.
+checks:    python -m pytest -q → 4 passed, 3 skipped (AC-4 also passes now, because it was
+           blocked only by the 409 mapping). By-hand edge cases: same-stage move → 409 (was
+           500); lowercase and unknown stage names → 422; unknown application → still 500
+evidence:  AC-2 (and AC-4); S-1 R2, R4, D5
+risk:      An unknown application_id still returns 500, not the 404 in S-1.md §4. No AC
+           covers 404, so only the Task 4 by-hand check guards it.
