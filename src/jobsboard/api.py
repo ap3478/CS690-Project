@@ -7,7 +7,14 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, StrictStr, field_validator
 
-from jobsboard.pipeline import ApplicationStore, Application, InvalidTransition, Stage, move_stage
+from jobsboard.pipeline import (
+    Application,
+    ApplicationNotFound,
+    ApplicationStore,
+    InvalidTransition,
+    Stage,
+    move_stage,
+)
 
 app = FastAPI(title="Internal Jobs Board")
 store = ApplicationStore()  # module-level, in-memory (D4, D11)
@@ -26,6 +33,15 @@ class CreateApplicationBody(BaseModel):
 
 class MoveStageBody(BaseModel):
     to_stage: Stage
+
+
+@app.exception_handler(ApplicationNotFound)
+def _not_found(_: Request, exc: ApplicationNotFound) -> JSONResponse:
+    # S-1.md §4: unknown application id returns 404 and changes nothing (R4).
+    return JSONResponse(
+        status_code=404,
+        content={"detail": {"error": "application_not_found", "application_id": exc.application_id}},
+    )
 
 
 @app.exception_handler(InvalidTransition)
