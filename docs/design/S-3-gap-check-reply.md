@@ -1,7 +1,7 @@
 # Gap check reply: S-3.md (verbatim)
 
 - Model: Claude Code subagent, Claude Opus 5.5 (claude-opus-5-5), 2026-11-09
-- Input: `prompts/gap_check_prompt.md` plus `docs/design/S-3.md` at commit a5d472e only. The agent was told not to read any other file.
+- Input: `prompts/gap_check_prompt.md` plus `docs/design/S-3.md` at commit 7583dd4 only. The agent was told not to read any other file.
 - Adjudication of each question: `docs/design/S-3-gap-adjudication.md`
 
 ---
