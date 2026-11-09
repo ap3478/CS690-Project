@@ -142,7 +142,8 @@ risk:      AC-3 sets up Interview by calling the move endpoint under test, so a 
            forward moves would fail AC-3's setup rather than its assertion.
 
 ## Entry 9
-artifact:  docs/plans/S-1-plan.md; prompts/s1_task_AC-1..AC-4.md; commit 5b39391
+artifact:  docs/plans/S-1-plan.md; prompts/s1_task_AC-1.md, prompts/s1_task_AC-2.md,
+           prompts/s1_task_AC-3.md, prompts/s1_task_AC-4.md; commit 5b39391
 tool:      Claude Code, Claude Opus 5.5 (claude-opus-5-5), 2026-11-09
 prompts:   write the plan before editing; prompts/s1_plan_prompt.md
 review:    The plan has a How section (2 new files, an in-memory dict store) and 4 tasks, one
@@ -151,7 +152,7 @@ review:    The plan has a How section (2 new files, an in-memory dict store) and
            Offer → Rejected (open question OQ-1).
 checks:    git diff --stat before the commit: only docs/plans/ and prompts/ changed
 evidence:  S-1; AC-1..AC-4
-risk:      None of the plan's estimates are verified, and task boundaries overlap: Task 1
+risk:      The plan's estimates are unverified, and task boundaries overlap: Task 1
            creates the full transition table, so AC-3 passes before Task 3.
 
 ## Entry 10
@@ -310,3 +311,22 @@ evidence:  Deliverable 2b; INT-04, INT-05
 risk:      Dates are recorded only to the week (2026-11-02). Consent for INT-04 and INT-05 is
            Abraham's recollection, not a contemporaneous written note. Ketan and Aditya do not
            appear in any row yet, so "every member takes part" is still unshown.
+
+## Entry 19
+artifact:  SHA roll-up of AI-assisted commits not named in an earlier entry: 27510a4 (ledger
+           entry 16), 36293a0 (ledger entry 17 + prompts/review_fixes_prompt.md), c1092c7
+           (report PDF rebuilt after the review fixes), c242d20 (ledger entry 18 +
+           prompts/participation_prompt.md), 9b2d524 (report PDF rebuilt after the
+           participation update). Also fixes entry 9: its prompt path is now the four real
+           files, and its risk line no longer starts with the word "None".
+tool:      Claude Code, Claude Opus 5.5 (claude-opus-5-5), 2026-11-09
+prompts:   Abraham: "Fix ledger problems now"; prompts/ledger_fix_prompt.md
+review:    Checked every prompts/ path in this ledger against the files on disk, and every
+           commit in git log against the ledger text. Entry 9's wording was changed, but
+           what it records was not.
+checks:    for each prompts/*.md path in LEDGER.md: test -f → all present; for each SHA in
+           git log --format=%h: grep -q in LEDGER.md → all present except the commit that
+           adds this entry
+evidence:  Deliverable 8
+risk:      The commit that adds this entry, and any later commit, is not named here. Each
+           future AI-assisted commit needs its own entry or a later roll-up.

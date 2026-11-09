@@ -1,0 +1,9 @@
+# Ledger-fix prompt (Claude Code, Claude Opus 5.5, 2026-11-09)
+
+## Abraham's request, verbatim
+> Fix ledger problems now
+
+Problems from the agent's compliance check:
+1. Five AI-assisted commits were not named in the ledger: 27510a4, 36293a0, c1092c7, c242d20, 9b2d524.
+2. Entry 9 cited `prompts/s1_task_AC-1..AC-4.md`, a shorthand path that does not exist as a file.
+3. Entry 9's risk line began with "None of …", which could be read as "None".
