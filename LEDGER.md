@@ -427,3 +427,21 @@ evidence:  Deliverable 9; AI policy (a person checks every claim before it enter
 risk:      The 9 E entries from INT-01..INT-03 have not been checked against the notes by any
            person; Aditya and Ketan need to do it. The statement says nothing about Ketan's
            INT-03 notes beyond the general review.
+
+## Entry 23
+artifact:  report/build_report.py (REPO_URL), report/REPORT.md and CS690_M1_Report.pdf
+           rebuilt; commit ea11ad3. This entry also names the ledger commit for entry 22,
+           e02c5ea. Push to https://github.com/ap3478/CS690-Project attempted on 2026-11-09:
+           HTTPS had no credentials; SSH authenticated as AbrahamEapen but was denied
+           (no write access to ap3478's repo). Nothing has been pushed yet.
+tool:      Claude Code, Claude Opus 5.5 (claude-opus-5-5), 2026-11-09
+prompts:   Abraham: "Push to https://github.com/ap3478/CS690-Project"; prompts/push_prompt.md
+review:    Before pushing, the remote was checked with git ls-remote: it exists and is empty,
+           so nothing was overwritten. The report's repository line was changed from the
+           TODO to the URL, and the PDF was rebuilt. No other content changed.
+checks:    git ls-remote → no refs (empty repo); git log --format=%ae | sort -u → the no-reply
+           address only; python -m pytest -q → 4 passed, 3 skipped
+evidence:  Turn-in instructions (GitHub repository URL)
+risk:      The commit that adds this entry is not named here. The repository belongs to
+           Aditya's account (ap3478), so collaborator access and its public/private setting
+           are his to manage. Clone and test from GitHub itself after the push.
