@@ -406,3 +406,24 @@ evidence:  Deliverable 2b; INT-01..INT-03
 risk:      The INT-01..INT-03 details and consent were reported by Abraham, not confirmed
            by Ketan or Aditya in writing. INT-01, INT-02, INT-04 and INT-05 dates are
            recorded only to the week.
+
+## Entry 22
+artifact:  contribution/Abraham_Eapen_contribution.md and .pdf, completed and signed; commit
+           371d0d9. This entry also names the ledger commit for entry 21, 0c4a544.
+tool:      Claude Code, Claude Opus 5.5 (claude-opus-5-5), 2026-11-09
+prompts:   Abraham: "prompt me for my contribution statement, signature , and date";
+           prompts/contribution_prompt.md
+review:    The teammate review, the findings, the E-entry check, the signature form and the
+           date all come from Abraham's answers. The AI-assisted table was updated to cover
+           entries 16–21 and the current backlog (S-1..S-14, AC-1..AC-20). The agent
+           corrected its own draft twice before committing. It had miscounted Abraham's E
+           entries as 16 and 8; checking the log with awk gave 15 (INT-04/05) and 9
+           (INT-01..03). It had also added "no problems in Ketan's INT-03 notes", which
+           Abraham did not say; that line was removed.
+checks:    awk over evidence_log.md sources → INT-04/05 only: E-1..E-4, E-8..E-10, E-13,
+           E-14, E-16..E-20, E-24 (15); citing INT-01..03: E-5..E-7, E-11, E-12, E-15,
+           E-21..E-23 (9). grep TODO contribution/Abraham_Eapen_contribution.md → 0
+evidence:  Deliverable 9; AI policy (a person checks every claim before it enters the log)
+risk:      The 9 E entries from INT-01..INT-03 have not been checked against the notes by any
+           person; Aditya and Ketan need to do it. The statement says nothing about Ketan's
+           INT-03 notes beyond the general review.
