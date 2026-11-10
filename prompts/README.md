@@ -12,3 +12,4 @@ Every prompt referenced from `LEDGER.md` is stored here verbatim, at the path th
 | `participation_prompt.md` | INT-04 and INT-05 participation details | 18 |
 | `ledger_fix_prompt.md` | Ledger roll-up and entry 9 fixes | 19 |
 | `public_repo_prompt.md` | Redaction and history rewrite for the public repo | 20 |
+| `participation_teammates_prompt.md` | INT-01 to INT-03 participation details | 21 |

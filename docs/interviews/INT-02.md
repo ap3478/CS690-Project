@@ -2,7 +2,10 @@
 
 - **Cite as:** INT-02, director of talent acquisition
 - **Source file:** `CS690 - Project - Senior Recruiter Answers.docx`, second interview in that file (team's original notes)
-- **Format / consent / date / team members:** see `docs/interviews/participation.md`
+- **Date:** week of 2026-11-02 (exact day not recorded)
+- **Format:** in person, about 30–45 minutes; handwritten notes, typed up afterward; no recording
+- **Team member:** Aditya Pothuri
+- **Consent:** at the start, the interviewee was told this is a graduate class project, how the notes would be used, and that they could stop at any time (as reported by the team)
 - No names or identifying details are kept. Quotes are as recorded in the original notes, except that confidential figures and identifying details are generalized in [brackets] for the public repository.
 
 ## Raw notes

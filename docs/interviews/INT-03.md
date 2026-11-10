@@ -4,6 +4,7 @@
 - **Source file:** `CS690 - Project - Software Developer Role.docx` (team's original notes; that file labeled this interview INT-01, renumbered here to INT-03 because INT-01 was already used). Identifying details are generalized in [brackets] for the public repository.
 - **Interviewee:** senior developer (individual contributor), [trading-systems team at a financial-services firm]; hiring manager for 1 role
 - **Date:** 2026-11-04
+- **Team member:** Ketan Verma
 - **Format:** 20-minute informal face-to-face conversation, in person; notes taken by hand, no recording
 - **Consent script used:** "This is an NJIT graduate class project. Notes stay anonymous and are used only for our report. You can stop at any time. OK if I jot down a few notes?"
 - **Role being hired (context):** 1 senior developer, 15+ years; prior trading-technology experience; strong [domain] trading knowledge; [built core trading-system components]; [a niche database language] and Java.
