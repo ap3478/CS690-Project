@@ -388,3 +388,21 @@ risk:      Generalized details could still identify someone to a colleague who k
            context. INT-03's consent promised use "only for our report", so a public repo
            may go beyond it; this was not re-confirmed with the interviewee. Before any
            future push, check that the commit emails are still the no-reply address.
+
+## Entry 21
+artifact:  docs/interviews/participation.md (INT-01..INT-03 rows; the TODO note replaced by a
+           per-member summary), INT-01.md, INT-02.md and INT-03.md headers; commit e28dc0f.
+           This entry also names the ledger commit for entry 20, 2950088.
+tool:      Claude Code, Claude Opus 5.5 (claude-opus-5-5), 2026-11-09
+prompts:   Abraham: "I have the dates for Ketan and Aditya. please prompt me";
+           prompts/participation_teammates_prompt.md
+review:    Every value came from Abraham's answers on his teammates' behalf. INT-03's date
+           and format were already in its original notes; only the team member was added.
+           Each member now appears in at least one row: Aditya (INT-01, INT-02), Ketan
+           (INT-03), Abraham (INT-04, INT-05).
+checks:    grep -c "\[fill in\]" docs/interviews/participation.md → 0; git log -1 --format=%ae
+           → the no-reply address
+evidence:  Deliverable 2b; INT-01..INT-03
+risk:      The INT-01..INT-03 details and consent were reported by Abraham, not confirmed
+           by Ketan or Aditya in writing. INT-01, INT-02, INT-04 and INT-05 dates are
+           recorded only to the week.
