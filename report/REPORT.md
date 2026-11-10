@@ -1,8 +1,8 @@
 # CS 690 Project Milestone 1: Internal Jobs Board Portal
 
 Team: Ketan Verma, Aditya Pothuri, Abraham Eapen  
-Repository: [TODO: GitHub repository URL]  
-Report built from commit: `e28dc0f`
+Repository: https://github.com/ap3478/CS690-Project  
+Report built from commit: `e02c5ea`
 
 ## Table of contents {#toc}
 

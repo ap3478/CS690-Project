@@ -14,3 +14,4 @@ Every prompt referenced from `LEDGER.md` is stored here verbatim, at the path th
 | `public_repo_prompt.md` | Redaction and history rewrite for the public repo | 20 |
 | `participation_teammates_prompt.md` | INT-01 to INT-03 participation details | 21 |
 | `contribution_prompt.md` | Contribution statement review, signature, date | 22 |
+| `push_prompt.md` | Set the repo URL and push to GitHub | 23 |

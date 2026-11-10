@@ -11,7 +11,7 @@ import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-REPO_URL = "[TODO: GitHub repository URL]"  # set before submission
+REPO_URL = "https://github.com/ap3478/CS690-Project"
 
 
 def read(rel: str) -> str:
